@@ -31,28 +31,66 @@ body {
   border: 0;
 }
 
-/* 内容区域样式 */
+/* 内容区域样式 - 现代化卡片设计 */
 .section {
   margin-bottom: 30px;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-  padding: 25px;
-  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  border: 1px solid #f0f0f0;
   min-height: 100px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Profile部分样式 */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px 16px 0 0;
+}
+
+.section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile部分样式 - 增强卡片效果 */
 .profile-container {
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  padding: 20px;
+  padding: 32px;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+.profile-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+.profile-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
 }
 
 /* 响应式设计优化 */
@@ -103,7 +141,61 @@ body {
   flex: 1;
 }
 
-.profile-container:hover, .education-item:hover, .publication-item:hover {
+/* Education项目卡片样式 */
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  border-radius: 12px 12px 0 0;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.degree {
+  font-weight: 600;
+  color: #0066cc;
+  font-size: 1.1rem;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.details {
+  flex: 1;
+}
+
+.details p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.institution {
+  color: #666;
+  font-style: italic;
+}
+
+.profile-container:hover, .publication-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -164,9 +256,66 @@ body {
   color: #555;
 }
 
+/* Bio-section 卡片样式优化 */
 .bio-section {
   margin-bottom: 30px;
   line-height: 1.7;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.bio-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  border-radius: 16px 16px 0 0;
+}
+
+.bio-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.bio-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.bio-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.bio-section:hover .bio-icon {
+  transform: scale(1.1);
+}
+
+.bio-section p {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  flex: 1;
 }
 
 /* 研究兴趣标签样式 - 扁平化设计 */
@@ -251,13 +400,26 @@ body {
 }
 
 .publication-item {
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 12px;
   background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-left: 4px solid #0066cc;
+  position: relative;
+  overflow: hidden;
+}
+
+.publication-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 0 4px 4px 0;
 }
 
 .publication-item:hover {
@@ -505,11 +667,56 @@ body.dark-theme .footer-content {
 body.dark-theme .section {
   background-color: #1e1e1e;
   border: 1px solid #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .section:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 body.dark-theme .profile-container {
   background-color: #1e1e1e;
   border: 1px solid #333;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .profile-container:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .education-item {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .education-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .publication-item {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .publication-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Bio-section 暗色主题样式 */
+body.dark-theme .bio-section {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .bio-section:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .bio-section p {
+  color: #e0e0e0;
 }
 
 body.dark-theme h1, 
@@ -599,15 +806,46 @@ body.dark-theme .publication-item:hover {
   
   .education-item {
     flex-direction: column;
+    padding: 20px;
   }
   
   .degree {
     margin-bottom: 10px;
     width: 100%;
+    min-width: auto;
   }
   
   .publication-item {
-    padding: 15px;
+    padding: 20px;
+  }
+  
+  .section {
+    padding: 24px;
+    border-radius: 12px;
+  }
+  
+  .profile-container {
+    padding: 24px;
+    border-radius: 16px;
+  }
+  
+  .bio-section {
+    padding: 24px;
+    border-radius: 12px;
+  }
+  
+  .bio-section p {
+    font-size: 1rem;
+  }
+  
+  .bio-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .bio-icon {
+    align-self: center;
   }
   
   .publication-links {
