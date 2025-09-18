@@ -427,6 +427,72 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Professional Services 卡片样式 */
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 4px solid #f093fb;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 0 4px 4px 0;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-content {
+  flex: 1;
+}
+
+.service-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.service-journal {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
 .publication-title {
   font-size: 1.1rem;
   font-weight: 600;
@@ -704,6 +770,25 @@ body.dark-theme .publication-item:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
+/* Professional Services 暗色主题样式 */
+body.dark-theme .service-item {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .service-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .service-title {
+  color: #e0e0e0;
+}
+
+body.dark-theme .service-journal {
+  color: #adb5bd;
+}
+
 /* Bio-section 暗色主题样式 */
 body.dark-theme .bio-section {
   background-color: #1e1e1e;
@@ -845,6 +930,16 @@ body.dark-theme .publication-item:hover {
   }
   
   .bio-icon {
+    align-self: center;
+  }
+  
+  .service-item {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .service-icon {
     align-self: center;
   }
   
