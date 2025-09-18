@@ -1,26 +1,27 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Lei Li's Homepage</title>
-  <meta name="description" content="Lei Li, Lecturer at Hebei Normal University. Research in Medical Image Analysis and Computer Vision">
-  <meta name="keywords" content="Lei Li, Hebei Normal University, Medical Image Analysis, Computer Vision, Research">
+  <title>Lei Li - Lecturer at Hebei Normal University</title>
+  <meta name="description" content="Lei Li, Lecturer at Hebei Normal University. Research in Medical Image Analysis and Computer Vision. Publications in MICCAI, BSPC, and other top venues.">
+  <meta name="keywords" content="Lei Li, Hebei Normal University, Medical Image Analysis, Computer Vision, Research, MICCAI, BSPC">
   <meta name="author" content="Lei Li">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Lei Li's Homepage">
-  <meta property="og:description" content="Lei Li, Lecturer at Hebei Normal University. Research in Medical Image Analysis and Computer Vision">
+  <meta property="og:title" content="Lei Li - Lecturer at Hebei Normal University">
+  <meta property="og:description" content="Lei Li, Lecturer at Hebei Normal University. Research in Medical Image Analysis and Computer Vision.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://smilejet.github.io">
   
-  <!-- 预加载CSS -->
+  <!-- 预加载关键资源 -->
   <link rel="preload" href="./css/ll.css" as="style">
+  <link rel="preload" href="./images/photo.jpg" as="image">
   <link rel="stylesheet" href="./css/ll.css">
   
-  <!-- 延迟加载统计脚本 -->
-  <script defer>
-  window.addEventListener('load', function() {
+  <!-- 统计脚本 -->
+  <script>
     var _mtac = {};
     (function() {
         var mta = document.createElement("script");
@@ -30,16 +31,18 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(mta, s);
     })();
-  });
   </script>
 
   <style>
     /* 关键CSS内联，减少渲染阻塞 */
-    body {opacity: 0; transition: opacity 0.5s ease;}
-    .loaded {opacity: 1;}
-    
-    @keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
-    .fade-in {animation: fadeIn 0.5s ease forwards;}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
     
     /* 响应式设计 */
     @media (max-width: 900px) {
@@ -50,46 +53,29 @@
       table {
         width: 100%;
       }
+      .profile-container {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
 
 
-<body class="fade-in">
-<script>
-  // 页面加载完成后添加loaded类
-  document.addEventListener('DOMContentLoaded', function() {
-    document.body.classList.add('loaded');
-    
-    // 为各部分添加淡入动画
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold: 0.1});
-    
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  });
-</script>
+<body>
 
 <div id="profile"></div>
 
-<header class="site-header">
+<header class="site-header" role="banner">
   <div class="header-container">
-    <a href="#" class="logo">Lei Li</a>
-    <nav class="main-nav">
+    <a href="#profile" class="logo" aria-label="Lei Li Homepage">Lei Li</a>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
       <a href="#profile" class="nav-link">Profile</a>
       <a href="#education" class="nav-link">Education</a>
       <a href="#papers" class="nav-link">Publications</a>
     </nav>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
       </svg>
     </button>
@@ -112,42 +98,42 @@
 <div id="left">
 <div class="profile-container">
   <div class="profile-photo">
-    <img src="./images/photo.jpg" alt="Lei Li's Photo" class="profile-image">
+    <img src="./images/photo.jpg" alt="Lei Li's professional photo" class="profile-image" width="150" height="150" loading="eager">
   </div>
 
   <div class="profile-info">
     <h1 class="name">Lei Li</h1>
-    <h1 class="name-zh">李磊</h1>
+    <h2 class="name-zh">李磊</h2>
     
     <p class="affiliation">
-      <a href="https://www.hebtu.edu.cn/" target="_blank">College of Computer and Cyber Security, Hebei Normal University</a>
+      <a href="https://www.hebtu.edu.cn/" target="_blank" rel="noopener noreferrer">College of Computer and Cyber Security, Hebei Normal University</a>
     </p>
     
-    <div class="social-links">
-      <a href="https://scholar.google.com/citations?user=ZaQmJHgAAAAJ" target="_blank" class="social-btn">Google Scholar</a>
-      <a href="https://orcid.org/0000-0002-1500-7446" target="_blank" class="social-btn">ORCID</a>
-      <a href="https://github.com/SmileJET" target="_blank" class="social-btn">Github</a>
+    <div class="social-links" role="list" aria-label="Social media and academic profiles">
+      <a href="https://scholar.google.com/citations?user=ZaQmJHgAAAAJ" target="_blank" rel="noopener noreferrer" class="social-btn" role="listitem">Google Scholar</a>
+      <a href="https://orcid.org/0000-0002-1500-7446" target="_blank" rel="noopener noreferrer" class="social-btn" role="listitem">ORCID</a>
+      <a href="https://github.com/SmileJET" target="_blank" rel="noopener noreferrer" class="social-btn" role="listitem">Github</a>
     </div>
 
     
     <p class="contact">
-      Email: lilei [at] hebtu.edu.cn
+      Email: <a href="mailto:lilei@hebtu.edu.cn">lilei [at] hebtu.edu.cn</a>
     </p>
   </div>
 </div>
 
 
-<div class="bio-section">
+<section class="bio-section" aria-labelledby="bio-heading">
+  <h2 id="bio-heading" class="sr-only">Biography</h2>
   <p>Hello! My name is Lei Li, and I am currently a lecturer at the College of Computer and Cyber Security, Hebei Normal University, Shijiazhuang, China.</p>
-</div>
+</section>
 
-<div id="education"></div>
-<div class="section education-section">
-  <h2>Education</h2>
+<section id="education" class="section education-section" aria-labelledby="education-heading">
+  <h2 id="education-heading">Education</h2>
   <div class="education-item">
     <div class="degree">Ph.D 2020~2024</div>
     <div class="details">
-      <p>Supervisor: <a href="https://informatics.xmu.edu.cn/info/1018/46100.htm" target="_blank">Prof. Beizhan Wang</a></p>
+      <p>Supervisor: <a href="https://informatics.xmu.edu.cn/info/1018/46100.htm" target="_blank" rel="noopener noreferrer">Prof. Beizhan Wang</a></p>
       <p class="institution">Xiamen University, Xiamen, China</p>
     </div>
   </div>
@@ -155,24 +141,23 @@
   <div class="education-item">
     <div class="degree">Bachelor 2016~2020</div>
     <div class="details">
-      <p>Supervisor: <a href="https://informatics.xmu.edu.cn/info/1385/46120.htm" target="_blank">Prof. Shaozi Li</a></p>
+      <p>Supervisor: <a href="https://informatics.xmu.edu.cn/info/1385/46120.htm" target="_blank" rel="noopener noreferrer">Prof. Shaozi Li</a></p>
       <p class="institution">Xiamen University, Xiamen, China</p>
     </div>
   </div>
-</div>
+</section>
 
-<div class="section research-section">
-  <h2>Research Interests</h2>
-  <div class="research-tags">
-    <span class="research-tag">Computer Vision</span>
-    <span class="research-tag">Medical Image Analysis</span>
+<section class="section research-section" aria-labelledby="research-heading">
+  <h2 id="research-heading">Research Interests</h2>
+  <div class="research-tags" role="list" aria-label="Research areas">
+    <span class="research-tag" role="listitem">Computer Vision</span>
+    <span class="research-tag" role="listitem">Medical Image Analysis</span>
   </div>
-</div>
+</section>
 
 
 </td>
 </tr>
-</tbody></table>
 
 
 
@@ -193,7 +178,7 @@
     <a href="https://doi.org/10.1007/978-981-95-0033-8_14" target="_blank">Mamba-Enhanced Decoder with Prototype Consistency for Semi-Supervised Medical Image Segmentation</a>
   </div>
   <div class="publication-authors">
-    Dong Chen, <u>Yunrong Zhang</u>, Xiaonan Li, Haibin Ma, Liang Tian, <b>Lei Li</b>*
+    Dong Chen, <u>Yunrong Zhang</u>, <u>Xiaonan Li</u>, Haibin Ma, Liang Tian, <b>Lei Li</b>*
   </div>
   <div class="publication-venue">
     International Conference on Intelligent Computing (<b>ICIC</b>) 2025
@@ -458,6 +443,32 @@
 <!-- 引入JavaScript文件 -->
 <script src="./js/jquery-3.5.0.min.js"></script>
 <script src="./js/nav-scroll.js"></script>
+
+<!-- 主题切换功能 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+  
+  // 检查本地存储中的主题设置
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-theme');
+  }
+  
+  // 主题切换功能
+  themeToggle.addEventListener('click', function() {
+    body.classList.toggle('dark-theme');
+    
+    // 保存主题设置到本地存储
+    if (body.classList.contains('dark-theme')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+});
+</script>
 </body></html>
 
 
