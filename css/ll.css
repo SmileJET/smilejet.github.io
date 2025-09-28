@@ -972,3 +972,285 @@ body.dark-theme .publication-item:hover {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+/* 时间轴样式 */
+.timeline {
+  position: relative;
+  padding-left: 0;
+  max-width: 100%;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.timeline-year {
+  position: relative;
+  margin: 35px 0 25px 0;
+  padding-left: 50px;
+}
+
+.timeline-year::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 4px #667eea, 0 4px 12px rgba(102, 126, 234, 0.4);
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 4px #667eea, 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(102, 126, 234, 0.2), 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 4px #667eea, 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+}
+
+.timeline-year h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #f7fafc, #edf2f7);
+  border-radius: 16px;
+  border-left: 5px solid #667eea;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-year h3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.timeline-year:hover h3::before {
+  left: 100%;
+}
+
+.timeline-publications {
+  margin-left: 50px;
+  padding-left: 15px;
+}
+
+.timeline-publication-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #667eea;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.timeline-publication-item::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 30px;
+  width: 10px;
+  height: 10px;
+  background: #667eea;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px #667eea;
+  transition: all 0.3s ease;
+}
+
+.timeline-publication-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.timeline-publication-item:hover {
+  transform: translateX(12px) translateY(-2px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+  border-left-color: #764ba2;
+}
+
+.timeline-publication-item:hover::before {
+  background: #764ba2;
+  box-shadow: 0 0 0 3px #764ba2;
+  transform: scale(1.2);
+}
+
+.timeline-publication-item:hover::after {
+  left: 100%;
+}
+
+/* 暗色主题下的时间轴样式 */
+.dark-theme .timeline::before {
+  background: linear-gradient(to bottom, #64b5f6 0%, #9c88ff 100%);
+  box-shadow: 0 0 10px rgba(100, 181, 246, 0.3);
+}
+
+.dark-theme .timeline-year::before {
+  background: linear-gradient(135deg, #64b5f6, #9c88ff);
+  border-color: #1a202c;
+  box-shadow: 0 0 0 4px #64b5f6, 0 4px 12px rgba(100, 181, 246, 0.4);
+}
+
+.dark-theme .timeline-year h3 {
+  color: #e2e8f0;
+  background: linear-gradient(135deg, #2d3748, #4a5568);
+  border-left-color: #64b5f6;
+}
+
+.dark-theme .timeline-publication-item {
+  background: #2d3748;
+  border-left-color: #64b5f6;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .timeline-publication-item::before {
+  background: #64b5f6;
+  border-color: #1a202c;
+  box-shadow: 0 0 0 3px #64b5f6;
+}
+
+.dark-theme .timeline-publication-item:hover {
+  border-left-color: #9c88ff;
+  box-shadow: 0 8px 30px rgba(100, 181, 246, 0.3);
+}
+
+.dark-theme .timeline-publication-item:hover::before {
+  background: #9c88ff;
+  box-shadow: 0 0 0 3px #9c88ff;
+}
+
+.dark-theme .timeline-publication-item::after {
+  background: linear-gradient(90deg, transparent, rgba(100, 181, 246, 0.1), transparent);
+}
+
+/* 响应式时间轴 */
+@media (max-width: 768px) {
+  .timeline::before {
+    display: none; /* 隐藏时间轴主线 */
+  }
+  
+  .timeline-year {
+    padding-left: 0;
+    margin: 30px 0 25px 0;
+    text-align: center;
+  }
+  
+  .timeline-year::before {
+    display: none; /* 隐藏年份节点 */
+  }
+  
+  .timeline-year h3 {
+    font-size: 1.5rem;
+    padding: 12px 24px;
+    margin: 0 auto;
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  }
+  
+  .timeline-publications {
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  
+  .timeline-publication-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #667eea;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-publication-item::before {
+    display: none; /* 隐藏小圆点 */
+  }
+  
+  .timeline-publication-item::after {
+    display: none; /* 隐藏光效 */
+  }
+  
+  .timeline-publication-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-year {
+    margin: 25px 0 20px 0;
+  }
+  
+  .timeline-year h3 {
+    font-size: 1.3rem;
+    padding: 10px 20px;
+  }
+  
+  .timeline-publications {
+    margin-top: 15px;
+  }
+  
+  .timeline-publication-item {
+    padding: 18px;
+    margin-bottom: 18px;
+  }
+  
+  .timeline-publication-item:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* 暗色主题下的移动端优化 */
+@media (max-width: 768px) {
+  .dark-theme .timeline-year h3 {
+    background: linear-gradient(135deg, #64b5f6, #9c88ff);
+    color: white;
+    box-shadow: 0 4px 15px rgba(100, 181, 246, 0.3);
+  }
+  
+  .dark-theme .timeline-publication-item {
+    background: #2d3748;
+    border-left-color: #64b5f6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dark-theme .timeline-publication-item:hover {
+    box-shadow: 0 8px 25px rgba(100, 181, 246, 0.3);
+  }
+}

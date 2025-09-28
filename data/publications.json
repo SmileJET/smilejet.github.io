@@ -1,0 +1,180 @@
+{
+  "publications": [
+    {
+      "title": "SAMTNU: Adaptive Segment Anything Model for Thyroid and Nodule Ultrasound Image Segmentation",
+      "authors": "Dong Chen, Xiaonan Li, Haibin Ma, Yunrong Zhang, <b>Lei Li</b>*",
+      "venue": "International Conference on Artificial Neural Networks (<b>ICANN</b>) 2025",
+      "year": 2025,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1007/978-3-032-04546-1_29"
+        }
+      ]
+    },
+    {
+      "title": "Mamba-Enhanced Decoder with Prototype Consistency for Semi-Supervised Medical Image Segmentation",
+      "authors": "Dong Chen, Yunrong Zhang, Xiaonan Li, Haibin Ma, Liang Tian, <b>Lei Li</b>*",
+      "venue": "International Conference on Intelligent Computing (<b>ICIC</b>) 2025",
+      "year": 2025,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1007/978-981-95-0033-8_14"
+        }
+      ]
+    },
+    {
+      "title": "Enhancing semi-supervised medical image segmentation with boundary awareness and competitive contrastive learning",
+      "authors": "Zhikang Lin, Zhenteng Li, Jiawei Su, <b>Lei Li</b>, Sheng Lian.",
+      "venue": "Biomedical Signal Processing and Control (<b>BSPC</b>) 2025",
+      "year": 2025,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1016/j.bspc.2024.107450"
+        }
+      ]
+    },
+    {
+      "title": "VCLIPSeg: Voxel-Wise CLIP-Enhanced Model for Semi-supervised Medical Image Segmentation",
+      "authors": "<b>Lei Li</b>, Sheng Lian, Zhiming Luo, Beizhan Wang, Shaozi Li.",
+      "venue": "Medical Image Computing and Computer Assisted Interventions (<b>MICCAI</b>) 2024 (early accept)",
+      "year": 2024,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1007/978-3-031-72114-4_66"
+        },
+        {
+          "type": "Code",
+          "url": "https://github.com/SmileJET/VCLIPSeg"
+        }
+      ]
+    },
+    {
+      "title": "Learning multi-organ segmentation via partial- and mutual-prior from single-organ datasets",
+      "authors": "<b>Lei Li</b>, Sheng Lian, Zhiming Luo, Beizhan Wang, Shaozi Li.",
+      "venue": "Biomedical Signal Processing and Control (<b>BSPC</b>) 2024",
+      "year": 2024,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1016/j.bspc.2023.105694"
+        },
+        {
+          "type": "Code",
+          "url": "https://github.com/SmileJET/CAC4SSL"
+        }
+      ]
+    },
+    {
+      "title": "Learning multi‐organ and tumor segmentation from partially labeled datasets by a conditional dynamic attention network",
+      "authors": "<b>Lei Li</b>, Sheng Lian, Dazhen Lin, Zhiming Luo, Beizhan Wang, Shaozi Li.",
+      "venue": "Concurrency and Computation: Practice and Experience (<b>CCPE</b>) 2024",
+      "year": 2024,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1002/cpe.7869"
+        }
+      ]
+    },
+    {
+      "title": "Learning multi-organ segmentation via partial- and mutual-prior from single-organ datasets",
+      "authors": "Sheng Lian&dagger;, <b>Lei Li</b>&dagger;, Zhiming Luo, Zhun Zhong, Beizhan Wang, Shaozi Li.",
+      "venue": "Biomedical Signal Processing and Control (<b>BSPC</b>) 2023",
+      "year": 2023,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1016/j.bspc.2022.104339"
+        }
+      ]
+    },
+    {
+      "title": "Symmetrical supervision with transformer for few-shot medical image segmentation",
+      "authors": "Yao Niu, Zhiming Luo, Sheng Lian, <b>Lei Li</b>, Shaozi Li, Haixin Song.",
+      "venue": "IEEE International Conference on Bioinformatics and Biomedicine (<b>BIBM</b>) 2022",
+      "year": 2022,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1109/BIBM55620.2022.9995238"
+        }
+      ]
+    },
+    {
+      "title": "CMRI Segmentation Domain Generalization by Random Style Transfer",
+      "authors": "Haixin Song, <b>Lei Li</b>, Zhiming Luo, Sheng Lian, Shaozi Li.",
+      "venue": "International Conference on Information Technology in Medicine and Education (<b>ITME</b>) 2022",
+      "year": 2022,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1109/ITME56794.2022.00095"
+        }
+      ]
+    },
+    {
+      "title": "Learning Consistency- and Discrepancy-Context for 2D Organ Segmentation",
+      "authors": "<b>Lei Li</b>&dagger;, Sheng Lian&dagger;, Zhiming Luo, Beizhan Wang, Shaozi Li, Shuo Li.",
+      "venue": "Medical Image Computing and Computer Assisted Interventions (<b>MICCAI</b>) 2021 (early accept)",
+      "year": 2021,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1007/978-3-030-87193-2_25"
+        }
+      ]
+    },
+    {
+      "title": "A global and local enhanced residual u-net for accurate retinal vessel segmentation",
+      "authors": "Sheng Lian, <b>Lei Li</b>, Guiren Lian, Xiao Xiao, Zhiming Luo, Shaozi Li.",
+      "venue": "IEEE/ACM transactions on computational biology and bioinformatics (<b>TCBB</b>) 2021",
+      "year": 2021,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1109/TCBB.2019.2917188"
+        }
+      ]
+    },
+    {
+      "title": "A weakly supervised tooth‐mark and crack detection method in tongue image",
+      "authors": "Hui Weng, <b>Lei Li</b>, Huangwei Lei, Zhiming Luo, Candong Li, Shaozi Li.",
+      "venue": "Concurrency and Computation: Practice and Experience (<b>CCPE</b>) 2021",
+      "year": 2021,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1002/cpe.6262"
+        }
+      ]
+    },
+    {
+      "title": "An iterative transfer learning framework for cross‐domain tongue segmentation",
+      "authors": "<b>Lei Li</b>, Zhiming Luo, Mengting Zhang, Yuanzheng Cai, Candong Li, Shaozi Li.",
+      "venue": "Concurrency and Computation: Practice and Experience (<b>CCPE</b>) 2020",
+      "year": 2020,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1002/cpe.5714"
+        }
+      ]
+    },
+    {
+      "title": "SERU: A cascaded SE‐ResNeXT U‐Net for kidney and tumor segmentation",
+      "authors": "Xiuzhen Xie, <b>Lei Li</b>, Sheng Lian, Shaohao Chen, Zhiming Luo.",
+      "venue": "Concurrency and Computation: Practice and Experience (<b>CCPE</b>) 2020",
+      "year": 2020,
+      "links": [
+        {
+          "type": "PDF",
+          "url": "https://doi.org/10.1002/cpe.5738"
+        }
+      ]
+    }
+  ]
+}
