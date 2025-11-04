@@ -53,7 +53,7 @@
       ]
     },
     {
-      "title": "Learning multi-organ segmentation via partial- and mutual-prior from single-organ datasets",
+      "title": "Contour-aware consistency for semi-supervised medical image segmentation",
       "authors": "<b>Lei Li</b>, Sheng Lian, Zhiming Luo, Beizhan Wang, Shaozi Li.",
       "venue": "Biomedical Signal Processing and Control (<b>BSPC</b>) 2024",
       "year": 2024,
